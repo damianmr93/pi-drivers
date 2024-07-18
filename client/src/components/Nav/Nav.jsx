@@ -7,11 +7,11 @@ const Nav = ({ forCleaningDriversFiltered }) => {
   return (
     <nav className={styles.navContainer}>
       <button>
-        <Link to={"/home"}>Home</Link>
+        <Link to={"/home"}><span className={styles.navSpan}>Home</span></Link>
       </button>
 
       <button>
-        <Link to={"/form"}>Create a driver</Link>
+        <Link to={"/form"}><span className={styles.navSpan}>Create a driver</span></Link>
       </button>
 
       <SearchBar forCleaningDriversFiltered={forCleaningDriversFiltered}/>

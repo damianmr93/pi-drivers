@@ -35,21 +35,6 @@ const SearchBar = ({ forCleaningDriversFiltered }) => {
       : true
   }
 
-  const idArray = []
-  const randomHandler = async () => {
-    const URL_SERVER = 'http://localhost:3001/drivers'
-
-    if(idArray.length === 0){
-      const { data } = await axios(URL_SERVER)
-      data.forEach(driver => idArray.push(driver.id))
-    }
-    const randomIndex = Math.floor(Math.random() * idArray.length)
-    const randomId = idArray[randomIndex]
-    //dispatch(cleanDriversFiltered())
-    dispatch(getDriverById(randomId))
-    setName("")
-  }
-
   const clearHandler = async () => {
     /* forCleanDriversFiltered() */
     forCleaningDriversFiltered('cleanState', 'clearButton')
@@ -73,9 +58,7 @@ const SearchBar = ({ forCleaningDriversFiltered }) => {
 
       <button className={styles.searchButton} id="searchButton" onClick={() => onSearch(name)} disabled={handleDisabled()}>🔍</button>
 
-      <button className={styles.randomButton} id="randomButton" disabled={handleDisabled()} onClick={randomHandler}>🎲</button>
-
-      <button className={styles.clearButton} id="clearButton" disabled={handleDisabled()} onClick={clearHandler}>🧼</button>
+      <button className={styles.clearButton} id="clearButton" disabled={handleDisabled()} onClick={clearHandler}>❌</button>
     </div>
   )
 }

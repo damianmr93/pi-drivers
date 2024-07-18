@@ -5,9 +5,9 @@ const LandingPage = () => {
     return(
         <div className={style.container}>
             <section className={style.section}>
-                <h1 className={style.tittle}>Driver Race Finder</h1>
+                <h1 className={style.tittle}>Racing Drivers Hub</h1>
                 <Link to={'/home'}><button className={style.button}>Access</button></Link>
-                <p className={style.description}>Find and create your favorite race drivers easily and quickly. Explore them based on their name, teams and more... You can also create your own driver!</p>
+                <p className={style.description}>Welcome to the Ultimate Drivers Hub! Explore, search, and find your favorite drivers effortlessly. Whether you're looking for the newest additions or seasoned professionals, our comprehensive database has you covered. Start your journey now and discover the driver that matches your needs and preferences!</p>
             </section>
         </div>
     )
