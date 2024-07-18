@@ -1,0 +1,25 @@
+.searchBarContainer {
+    display: flex;
+}
+
+.searchBarInput {
+    padding: .8rem 1.2rem;
+    border-radius: 8px 0 0 8px ;
+    border: 1px solid transparent;
+}
+
+.searchButton {
+    border-radius: 0 ;
+    border-left: 1px solid rgba(0, 0, 0, 0.116);
+/*     box-shadow: 0 0
+ */}
+
+.randomButton {
+    border-radius: 0 ;
+    border-left: 1px solid rgba(0, 0, 0, 0.116);
+}
+
+.clearButton {
+    border-radius: 0 8px 8px 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.116);
+}

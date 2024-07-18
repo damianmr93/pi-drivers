@@ -1,0 +1,21 @@
+.containerFilters {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+    /* top: 0;
+      right: 0 */
+    position: sticky;
+    top: 25%;
+    height: fit-content;
+    background-color: var(--background-color-containers);
+    /* border-right: 1px solid #ffb300; */
+    border-left: 1px solid var(--color-elements);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+  }
+  
+  .filterButton {
+      padding: 8px;
+      border-radius: var(--border-radius);
+  }

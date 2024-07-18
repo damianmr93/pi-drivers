@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh; 
+    background-image: url('../../assets/img/landingPageRetocado.png');
+    
+    background-size:cover; /* Ajusta el tamaño de la imagen para que cubra todo el fondo */
+    background-position:-11rem;
+    background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
+    background-attachment: fixed;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    gap: 2.5rem;
+    
+    background-color: #0000009f;
+    margin-left: 37rem;
+    /* padding: 2rem; */
+    border-radius: var(--border-radius);
+    height: 26rem;
+    width: 31rem;
+    border-left: 1px solid var(--color-elements);
+}
+
+.tittle {
+    color: var(--color-elements);
+    font-size: 3rem;
+}
+
+.description {
+    color:rgb(212, 212, 212);
+    width: 26rem;
+}
+
+.button {
+    transition: 1s;
+}
+.button:hover {
+    padding: 1em 2em;
+  } 
+
+  
