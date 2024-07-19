@@ -9,7 +9,7 @@
 
 .form {
     background-color: var(--color-elements);
-    padding: 1.5rem;
+    padding: 3.5rem;
     border-radius: var(--border-radius);
     display: flex;
     flex-direction: column;

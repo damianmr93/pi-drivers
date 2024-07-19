@@ -10,7 +10,7 @@ import {
     FILTER_BY_ORIGIN,
     FILTER_BY_TEAM,
     GET_TEAMS,
-    CLEAN_DRIVERS
+    CLEAN_DRIVERS,
   } from "./action-types"
   
   const initialState = {
@@ -20,9 +20,7 @@ import {
     /* filteredByOrigin: [], */
     teams: []
   }
-  
-  
-  
+
   
   const reducer = (state = initialState, { type, payload }) => {
     // const removeFav = state.allFavsCharacters.filter((fav) => fav.id != payload)
@@ -100,22 +98,28 @@ import {
   
   
         case FILTER_BY_ORIGIN: 
-  state.driversFiltered = [...state.drivers]
-  console.log('Filtrando por origen:', payload);  // Agregar log
-  console.log('Estado antes del filtrado:', state.driversFiltered);  // Agregar log
 
-  const filteredDrivers = payload === 'created'
-    ? state.driversFiltered.filter(driver => driver.isCreated)
-    : state.driversFiltered.filter(driver => !driver.isCreated)
+        return{
+          ...state,
+          driversFiltered: action.payload === 'api' ? state.drivers.filter((drivers) => typeof drivers.id === 'number' )
+          : action.payload === 'bd'?  state.drivers.filter((drivers) => typeof console.log(drivers.id) !== 'number' )
+          : state.drivers
+      };
+          /*state.driversFiltered = [...state.drivers]
+          console.log('Filtrando por origen:', payload);  // Agregar log
+          console.log('Estado antes del filtrado:', state.driversFiltered);  // Agregar log
 
-  console.log('Drivers filtrados:', filteredDrivers);  // Agregar log
+          const filteredDrivers = payload === 'created'
+            ? state.driversFiltered.filter(driver => console.log(driver.isCreated))
+            : state.driversFiltered.filter(driver => !driver.isCreated)
 
-  
-  return {
-    ...state,
-    driversFiltered: filteredDrivers
-  }
-      
+          console.log('Drivers filtrados:', filteredDrivers);  // Agregar log
+
+          
+          return {
+            ...state,
+            driversFiltered: filteredDrivers
+          }*/
   
       case FILTER_BY_TEAM:
         state.driversFiltered = [...state.drivers]

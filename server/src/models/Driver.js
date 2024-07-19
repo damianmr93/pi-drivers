@@ -5,9 +5,9 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('Driver', {
     id: {
-      type: DataTypes.INTEGER,
-    autoIncrement: true,
+      type: DataTypes.UUID,
     primaryKey: true,
+    defaultValue: DataTypes.UUIDV4
    },
    name: {
     type: DataTypes.JSONB,

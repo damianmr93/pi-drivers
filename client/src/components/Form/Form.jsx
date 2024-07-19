@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getTeams, getDrivers, cleanDrivers, cleanDriversFiltered } from "../../redux/actions";
+import { getTeams, getDrivers, postDriver, cleanDrivers, cleanDriversFiltered } from "../../redux/actions";
 import validation from '../validations/formValidations';
 import axios from "axios";
 import styles from './Form.module.css';
@@ -119,10 +119,9 @@ const Form = ({ teamsOptions, forCleaningDriversFiltered }) => {
       }));
     }
   };
-
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     if (Object.keys(errors).length >= 1) {
       window.alert('You are missing data or the data was introduced incorrectly');
       return;
@@ -142,6 +141,7 @@ const Form = ({ teamsOptions, forCleaningDriversFiltered }) => {
       console.error("Error creating driver:", error.message);
     }
   };
+
 
   return (
     <section className={styles.formContainer}>

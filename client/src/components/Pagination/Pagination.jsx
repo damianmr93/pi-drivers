@@ -66,7 +66,7 @@ const Pagination = ({ page, setPage, numberOfPages }) => {
         onClick={handleOnClick}
       />
 
-      <span>of {numberOfPages}</span>
+      <span className={styles.paginationSpan}>of {numberOfPages}</span>
 
       <button id="arrowRight" onKeyDown={handleOnKeyDown} className={styles.leftButton} disabled={page >= numberOfPages} onClick={nextPage}>▶️</button>
     </div>

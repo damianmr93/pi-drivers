@@ -26,6 +26,10 @@
     
 }
 
+.paginationSpan {
+    color: black;
+    text-align: center;
+}
 .rightButton {
     border-radius: 8px 0 0 8px ;
     border: 1px solid rgba(0, 0, 0, 0.116);
