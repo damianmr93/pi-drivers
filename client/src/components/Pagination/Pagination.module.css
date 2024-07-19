@@ -22,13 +22,14 @@
     background-color: white;
     display: flex;
     align-items: center;
-    padding-right: 1rem;
+    padding: 10px;
     
 }
 
 .paginationSpan {
     color: black;
     text-align: center;
+    font-weight: bold;
 }
 .rightButton {
     border-radius: 8px 0 0 8px ;
