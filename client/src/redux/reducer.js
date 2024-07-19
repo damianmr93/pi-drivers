@@ -97,29 +97,17 @@ import {
         }
   
   
-        case FILTER_BY_ORIGIN: 
-
-        return{
-          ...state,
-          driversFiltered: action.payload === 'api' ? state.drivers.filter((drivers) => typeof drivers.id === 'number' )
-          : action.payload === 'bd'?  state.drivers.filter((drivers) => typeof console.log(drivers.id) !== 'number' )
-          : state.drivers
-      };
-          /*state.driversFiltered = [...state.drivers]
-          console.log('Filtrando por origen:', payload);  // Agregar log
-          console.log('Estado antes del filtrado:', state.driversFiltered);  // Agregar log
-
-          const filteredDrivers = payload === 'created'
-            ? state.driversFiltered.filter(driver => console.log(driver.isCreated))
-            : state.driversFiltered.filter(driver => !driver.isCreated)
-
-          console.log('Drivers filtrados:', filteredDrivers);  // Agregar log
-
-          
-          return {
-            ...state,
-            driversFiltered: filteredDrivers
-          }*/
+        case FILTER_BY_ORIGIN:
+      const driversFiltered =
+        payload === "api"
+          ? state.drivers.filter((driver) => typeof driver.id === "number")
+          : payload === "db"
+          ? state.drivers.filter((driver) => typeof driver.id !== "number")
+          : state.drivers;
+      return {
+        ...state,
+        driversFiltered,
+      };
   
       case FILTER_BY_TEAM:
         state.driversFiltered = [...state.drivers]
