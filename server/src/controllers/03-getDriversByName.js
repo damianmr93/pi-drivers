@@ -13,14 +13,16 @@ const { Op } = require("sequelize");
 module.exports = async (req, res) => {
   try {
     const query = req.query.name;
+    
     const name = query.charAt(0).toUpperCase() + query.slice(1).toLowerCase();
-
+    console.log(name);
+    
     // Database
     const dbDrivers = await Driver.findAll({
       where: {
         [Op.or]: [
-          { 'name.plainForename': { [Op.iLike]: `%${name}%` } },
-          { 'name.plainSurname': { [Op.iLike]: `%${name}%` } }
+          { 'name.forename': { [Op.iLike]: `%${name}%` } },
+          { 'name.surname': { [Op.iLike]: `%${name}%` } }
         ],
       },
       include: {
@@ -30,8 +32,20 @@ module.exports = async (req, res) => {
           attributes: [],
         },
       }
+         
     });
 
+    /*const dbDrivers = await Driver.findAll({where: {name: {[Op.like]: `%${name}%`}}, include: [
+      {
+        model: Team,
+        attributes: ['name'],
+        through: {
+          attributes: [],
+        },
+      }
+  ]});*/
+
+      console.log(dbDrivers);
     // API
     const { data: apiDrivers } = await axios.get(
       `${URL_API}?name.forename=${name}`
