@@ -5,7 +5,7 @@
 
     width: 100vw;
     height: 100vh; 
-    background-image: url('../../assets/img/landingPageRetocado.png');
+    /* background-image: url('../../assets/img/backgroundHome.jpg');-*/
     
     background-size:cover; /* Ajusta el tamaño de la imagen para que cubra todo el fondo */
     background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */

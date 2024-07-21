@@ -3,7 +3,7 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -31,7 +31,7 @@ body {
   /* display: flex; */
   /* place-items: center; */
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 10vh;
 /*   background-image: url('../assets/img/background.jpg');
  */
 }
@@ -93,5 +93,5 @@ select {
 
 /* Cambiar el color de la barra de desplazamiento */
 ::-webkit-scrollbar-thumb {
-  background-color: #7d5700;; /* Solo para navegadores webkit */
+  background-color: #d43906b3 /* Solo para navegadores webkit */
 }
