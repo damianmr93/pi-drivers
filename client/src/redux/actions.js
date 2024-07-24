@@ -14,6 +14,8 @@ import {
     POST_DRIVER
   } from "./action-types"
   
+  //LAS ACTIONS SON LAS QUE SE COMUNICAN CON EL BACK
+  
   import axios from "axios";
 const URL_SERVER = "http://localhost:3001/drivers";
 
@@ -21,7 +23,6 @@ export const getDrivers = () => {
   return async (dispatch) => {
     try {
       const { data } = await axios(URL_SERVER);
-      console.log("Fetched drivers data:", data);
       return dispatch({ type: GET_DRIVERS, payload: data });
     } catch (error) {
       console.error("Error fetching drivers:", error.message);

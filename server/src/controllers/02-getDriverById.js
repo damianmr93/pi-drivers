@@ -5,10 +5,9 @@ const URL_API = require("../utils/url");
 module.exports = async (req, res) => {
   try {
     const { id } = req.params;
-    const numberRegex = /^[0-9]+$/; // Verificador de números
+    const numberRegex = /^[0-9]+$/;
 
     if (numberRegex.test(id)) {
-      // Verifica que id sea número para hacer peticion api
       const apiDriversResponse = await axios(`${URL_API}/${id}`);
 
       if (apiDriversResponse.data.id) {
@@ -41,6 +40,7 @@ module.exports = async (req, res) => {
       },
     });
 
+    
     if (dbDriver) {
       res.status(200).json(dbDriver);
     } else {

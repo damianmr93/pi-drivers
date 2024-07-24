@@ -13,10 +13,9 @@ const { Op } = require("sequelize");
 module.exports = async (req, res) => {
   try {
     const query = req.query.name;
-    
     const name = query.charAt(0).toUpperCase() + query.slice(1).toLowerCase();
-    console.log(name);
-    
+    console.log("driver buscado", query);
+
     // Database
     const dbDrivers = await Driver.findAll({
       where: {
@@ -35,24 +34,18 @@ module.exports = async (req, res) => {
          
     });
 
-    /*const dbDrivers = await Driver.findAll({where: {name: {[Op.like]: `%${name}%`}}, include: [
-      {
-        model: Team,
-        attributes: ['name'],
-        through: {
-          attributes: [],
-        },
-      }
-  ]});*/
-
-      console.log(dbDrivers);
+    
     // API
-    const { data: apiDrivers } = await axios.get(
+    const { data: apiDriversForename } = await axios.get(
       `${URL_API}?name.forename=${name}`
     );
 
-    const driversFound = [...dbDrivers, ...apiDrivers].slice(0, 15);
+    const { data: apiDriversSurname } = await axios.get(
+      `${URL_API}?name.surname=${name}`
+    );
 
+    const driversFound = [...dbDrivers, ...apiDriversForename, ...apiDriversSurname ].slice(0, 15);
+    console.log(driversFound);
     if (driversFound.length === 0) {
       return res.status(404).json({ message: "No se encontraron conductores con ese nombre." });
     }
