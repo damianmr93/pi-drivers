@@ -37,7 +37,7 @@ export const getDetail = (id) => {
           return dispatch({ type: GET_DETAIL, payload: data });
       } catch (error) {
           console.error("Error fetching detail:", error.message);
-          // Manejo de errores adicional si es necesario
+        
       }
   }
 }
@@ -71,7 +71,6 @@ export const getDetail = (id) => {
   }
   
   export const orderByName = (sort) => {
-    //console.log(sort);
     return { type: ORDER_BY_NAME, payload: sort}
   }
   

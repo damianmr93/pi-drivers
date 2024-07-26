@@ -1,8 +1,4 @@
 .CardsPagcontainer {
-    /*     background-color: rgba(0, 0, 0, 0.623);
-   */ /* border-radius: 1rem; */
-    /*     width: 67%;
-   */
    margin: 2.7rem 0;
    width: 69vw;
    display: flex;
@@ -15,15 +11,6 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    /* max-width: 100%; */
-    /* margin: auto; */
-    /*     padding: 2rem 0;
-   */
     margin-bottom: 2rem;
     gap: 4rem;
-    
-    
-  
-    /* height: fit-content; */
-    /* margin: 2rem 0 */
   }

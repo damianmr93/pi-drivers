@@ -2,6 +2,7 @@
     display: flex;
 }
 
+
 .searchBarInput {
     padding: .8rem 1.2rem;
     border-radius: 8px 0 0 8px ;
@@ -11,8 +12,7 @@
 .searchButton {
     border-radius: 0 ;
     border-left: 1px solid rgba(0, 0, 0, 0.116);
-/*     box-shadow: 0 0
- */}
+}
 
 .randomButton {
     border-radius: 0 ;

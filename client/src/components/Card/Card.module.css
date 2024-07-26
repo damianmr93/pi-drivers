@@ -10,7 +10,7 @@
     gap: .5rem;
 }
 
-.img{
+.img {
     width: 10rem;
     height: 10rem;
     object-fit: cover;
@@ -24,11 +24,6 @@
     box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
-.name, .status, .species, .gender, .origin{
-    font-size: 16px;
-    margin: .5rem;
-    color: black;
-}
 
 .cardTeams {
     overflow-y: scroll;

@@ -39,17 +39,17 @@ const App = () => {
   };
 
   const teamsFormat = (id, teams) => {
-    const teamStringFormat = /,(?!\s)/g;
+    const teamStringFormat = /,(?!\s)/g; // comas que no estan seguidas por un espacio
 
     if (!isNaN(id)) {
       // Si el id es un número, es un driver de la API
-      return typeof teams === 'string' 
-        ? teams.replace(teamStringFormat, ", ") 
-        : "No teams available"; 
+      return typeof teams === 'string'
+        ? teams.replace(teamStringFormat, ", ")
+        : "No teams available";
     } else {
       // Si no es un número, es un driver de la base de datos
-      return Array.isArray(teams) 
-        ? teams.map((team) => team.name).join(", ") 
+      return Array.isArray(teams)
+        ? teams.map((team) => team.name).join(", ")
         : "No teams available";
     }
   };

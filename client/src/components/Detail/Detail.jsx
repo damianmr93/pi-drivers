@@ -14,9 +14,6 @@ const Detail = ({ teamsFormat }) => {
     return () => dispatch(cleanDetail());
   }, [id, dispatch]);
 
-  if (!driver || Object.keys(driver).length === 0) {
-    return <div>Loading...</div>; // Muestra un mensaje de carga mientras se obtienen los datos
-  }
 
   const { image, name, nationality, description, dob, teams } = driver;
 

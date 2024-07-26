@@ -7,10 +7,8 @@
     position: sticky;
     top: 0;
     border: 1px solid black;
-  /*   border-bottom: 1px rgb(0, 0, 0) ;
-   */  /* border-right: 1px solid #ffb300; */
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
-    width: 80%;
+    border-radius: var(--border-radius);
+    width: 60%;
   }
 
   .navSpan{

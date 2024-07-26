@@ -1,5 +1,5 @@
 const { Driver, Team } = require("../db")
-const { postTeams } = require("../controllers/05-getTeams")
+const { postTeams } = require("./postTeams")
 
 module.exports = async (req, res) => {
   try {
@@ -29,7 +29,7 @@ module.exports = async (req, res) => {
     if (image.url === "") {
       image.url = "https://raw.githubusercontent.com/damianmoreira93/driversTerminar/477a8c34e8073e47be0e44dde3003e79bc0a4c28/server/src/assets/img/profileImage.png"
     }
-
+    //preguntar a andyi esto de abajo
     const [newDriver, created] = await Driver.findOrCreate({
       //Esto me repite drivers, pero no sé si está mal, porque qué pasa si el user quiere agregar drivers repetidos
       where: {

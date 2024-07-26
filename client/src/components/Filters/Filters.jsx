@@ -42,7 +42,7 @@ const Filters = ({ forCleaningDriversFiltered, teamsOptions }) => {
   }
 
   const handleOnClick = () => {
-    forCleaningDriversFiltered('cleanState', "clearButton")
+    forCleaningDriversFiltered('cleanState', 'clearButton')
   }
 
   return (

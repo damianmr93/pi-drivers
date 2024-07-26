@@ -158,7 +158,7 @@ const Form = ({ teamsOptions, forCleaningDriversFiltered }) => {
             title={errors.forename ? errors.forename : "It must not be empty and not have any symbols"}
             autoFocus
           />
-          {errors.forename && <span title={errors.forename} style={{ color: 'red' }}> *</span>}
+          {errors.forename && <span title={errors.forename} style={{ color: 'black' }}>*</span>}
         </div>
 
         <div>
@@ -172,7 +172,7 @@ const Form = ({ teamsOptions, forCleaningDriversFiltered }) => {
             id="plainSurname"
             title={errors.surname ? errors.surname : "It must not be empty and not have any symbols"}
           />
-          {errors.surname && <span title={errors.surname} style={{ color: 'red' }}> *</span>}
+          {errors.surname && <span title={errors.surname} style={{ color: 'black' }}> *</span>}
         </div>
 
         <div>
@@ -187,7 +187,7 @@ const Form = ({ teamsOptions, forCleaningDriversFiltered }) => {
             <option value="selectNationality">Select nationality</option>
             {nationalityOption()}
           </select>
-          {errors.nationality && <span title={errors.nationality} style={{ color: 'red' }}> *</span>}
+          {errors.nationality && <span title={errors.nationality} style={{ color: 'black' }}> *</span>}
         </div>
 
         <div>
@@ -212,13 +212,13 @@ const Form = ({ teamsOptions, forCleaningDriversFiltered }) => {
             onChange={handleChange}
             title={errors.dob ? errors.dob : 'You must introduce the birthdate'}
           />
-          {errors.dob && <span title={errors.dob} style={{ color: 'red' }}> *</span>}
+          {errors.dob && <span title={errors.dob} style={{ color: 'black' }}> *</span>}
         </div>
 
         <div>
           <div>
             <label title={errors.description ? errors.description : 'You must introduce a description'} htmlFor="description">Description</label>
-            {errors.description && <span title={errors.description} style={{ color: 'red' }}> *</span>}
+            {errors.description && <span title={errors.description} style={{ color: 'black' }}> *</span>}
           </div>
           <textarea
             className={styles.description}
@@ -233,7 +233,7 @@ const Form = ({ teamsOptions, forCleaningDriversFiltered }) => {
         <div className={styles.teams}>
           <div>
             <label title={errors.team ? errors.team : 'You must introduce a team'} htmlFor={`teams${count - 1}`}>Teams</label>
-            {errors.team && <span title={errors.team} style={{ color: 'red' }}> *</span>}
+            {errors.team && <span title={errors.team} style={{ color: 'black' }}> *</span>}
           </div>
           {[...Array(count)].map((_, i) => (
             <select
