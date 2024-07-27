@@ -14,7 +14,6 @@ module.exports = async (req, res) => {
       },
       attributes: ['id', 'name', 'description', 'image', 'nationality', 'dob']
     });
-//se realiza la busqueda en el modelo driver, de todos los atributos mencionados y se agrega el atributo name del modelo Team.
   
     let { data: apiDrivers } = await axios(URL_API);
 
