@@ -40,7 +40,6 @@ module.exports = async (req, res) => {
       },
     });
 
-    
     if (dbDriver) {
       res.status(200).json(dbDriver);
     } else {
