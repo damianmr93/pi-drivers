@@ -158,7 +158,7 @@ const Form = ({ teamsOptions, forCleaningDriversFiltered }) => {
             title={errors.forename ? errors.forename : "It must not be empty and not have any symbols"}
             autoFocus
           />
-          {errors.forename && <span title={errors.forename} style={{ color: 'black' }}>*</span>}
+          {errors.forename && <span title={errors.forename} style={{ color: 'black' }}> *</span>}
         </div>
 
         <div>
