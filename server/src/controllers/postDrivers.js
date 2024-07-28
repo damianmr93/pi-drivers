@@ -27,7 +27,7 @@ module.exports = async (req, res) => {
     if (!dbTeams.length) await postTeams()
 
     if (image.url === "") {
-      image.url = "https://raw.githubusercontent.com/damianmoreira93/driversTerminar/477a8c34e8073e47be0e44dde3003e79bc0a4c28/server/src/assets/img/profileImage.png"
+      image.url = "https://raw.githubusercontent.com/damianmr93/pi-drivers/main/server/src/assets/img/profileImage.png"
     }
     
     const [newDriver, created] = await Driver.findOrCreate({

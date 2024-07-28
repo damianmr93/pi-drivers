@@ -53,6 +53,7 @@ const Form = ({ teamsOptions, forCleaningDriversFiltered }) => {
 
   const handleAddTeamButton = () => {
     setCount(count + 1);
+
   };
 
   const handleRemoveTeamButton = () => {
@@ -85,7 +86,8 @@ const Form = ({ teamsOptions, forCleaningDriversFiltered }) => {
           [id]: value,
         },
       }));
-    } else if (id === "description" || id === "nationality" || id === "dob") {
+    } 
+      else if (id === "description" || id === "nationality" || id === "dob") {
       setNewDriver((prevDriver) => ({
         ...prevDriver,
         [id]: value,
@@ -103,8 +105,9 @@ const Form = ({ teamsOptions, forCleaningDriversFiltered }) => {
           url: value,
         },
       }));
-    } else if (id.includes("teams")) {
-      const index = parseInt(id.replace("teams", ""), 10);
+    } 
+      else if (id.includes("teams")) {
+      const index = parseInt(id.replace("teams", ""), 10); //quitamos el string "teams", para parsear y obtener el indice
       const newTeamsId = [...newDriver.teamsId];
       newTeamsId[index] = parseInt(value, 10);
 
@@ -119,7 +122,7 @@ const Form = ({ teamsOptions, forCleaningDriversFiltered }) => {
       }));
     }
   };
-  
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (Object.keys(errors).length >= 1) {
@@ -184,7 +187,7 @@ const Form = ({ teamsOptions, forCleaningDriversFiltered }) => {
             id="nationality"
             title={errors.nationality ? errors.nationality : 'You must select a nationality'}
           >
-            <option value="selectNationality">Select nationality</option>
+            <option value="selectNationality">Select Nationality</option>
             {nationalityOption()}
           </select>
           {errors.nationality && <span title={errors.nationality} style={{ color: 'black' }}> *</span>}

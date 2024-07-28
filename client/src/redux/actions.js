@@ -14,7 +14,6 @@ import {
     POST_DRIVER
   } from "./action-types"
   
-  //LAS ACTIONS SON LAS QUE SE COMUNICAN CON EL BACK
   
   import axios from "axios";
 const URL_SERVER = "http://localhost:3001/drivers";

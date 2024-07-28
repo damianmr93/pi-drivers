@@ -17,7 +17,7 @@ const validation = (userData) => {
     if(!userData.dob) errors.dob = 'You must introduce the birthdate'
 
     if(userData.teamsId.length === 0 || userData.teamsId.includes('selectTeams')) errors.team = 'You must introduce a team'
-    //console.log(errors);
+    
     if(!userData.description) errors.description = 'You must introduce a description'
     
     return errors

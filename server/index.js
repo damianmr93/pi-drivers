@@ -3,7 +3,7 @@ const { conn } = require("./src/db.js");
 const PORT = 3001;
 
 conn
-  .sync({ force: true })  // Esto borrará y recreará las tablas, úsalo con precaución en producción
+  .sync({ force: false })  // Esto borra y recrea las tablas, CUIDADO!!!
   .then(() => {
     server.listen(PORT, () => {
       console.log("Server listening on port", PORT);

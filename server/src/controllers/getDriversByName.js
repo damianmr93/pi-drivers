@@ -37,7 +37,7 @@ module.exports = async (req, res) => {
       `${URL_API}?name.surname=${name}`
     );
 
-    const driversFound = [...dbDrivers, ...apiDriversForename, ...apiDriversSurname ]
+    const driversFound = [...dbDrivers, ...apiDriversForename, ...apiDriversSurname ].slice(0,15);
     if (driversFound.length === 0) {
       return res.status(404).json({ message: "No se encontraron conductores con ese nombre." });
     }
